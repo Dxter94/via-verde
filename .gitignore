@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# Secrets — NEVER commit real keys. Share only .env.example.
+.env
+.env.local
+.env.*.local
+
+# SQLite database files (runtime data)
+data/*.sqlite
+data/*.sqlite-journal
+data/*.db
+
+# Logs / OS noise
+*.log
+.DS_Store
+
+# Test / coverage output
+coverage/

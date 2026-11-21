@@ -1,0 +1,181 @@
+:root {
+  --green: #1f9d55;
+  --green-dark: #14532d;
+  --ink: #0f172a;
+  --muted: #64748b;
+  --bg: #f1f5f9;
+  --card: #ffffff;
+  --line: #e2e8f0;
+  --accent: #7c5cff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.5;
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--green-dark), var(--green));
+  color: #fff;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+}
+.hero h1 {
+  margin: 0;
+  font-size: 2.25rem;
+}
+.hero p {
+  margin: 0.25rem 0 0;
+  opacity: 0.9;
+}
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  display: grid;
+  gap: 1.25rem;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+.card h2 {
+  margin-top: 0;
+  font-size: 1.15rem;
+}
+
+.row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.row label {
+  flex: 1 1 200px;
+}
+
+label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 0.75rem;
+}
+input,
+select {
+  width: 100%;
+  margin-top: 0.25rem;
+  padding: 0.6rem 0.7rem;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  font-size: 1rem;
+  background: #fff;
+  color: var(--ink);
+}
+
+button {
+  background: var(--green);
+  color: #fff;
+  border: 0;
+  border-radius: 9px;
+  padding: 0.7rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+button:hover {
+  background: var(--green-dark);
+}
+
+.result {
+  margin-top: 1.25rem;
+  padding: 1rem 1.1rem;
+  border-radius: 11px;
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+}
+.result .coach {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--green-dark);
+  margin: 0 0 0.5rem;
+}
+.result .coach .tag {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #fff;
+  background: var(--accent);
+  border-radius: 999px;
+  padding: 0.1rem 0.5rem;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+.result .coach .tag.fallback {
+  background: var(--muted);
+}
+.result .detail {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin: 0.2rem 0;
+}
+
+.stats {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.stat {
+  flex: 1 1 140px;
+}
+.stat .value {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--green-dark);
+}
+.stat .label {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.trips {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.trips li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.92rem;
+}
+.trips li:last-child {
+  border-bottom: 0;
+}
+.trips .muted {
+  color: var(--muted);
+}
+
+footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.8rem;
+  padding: 2rem 1.5rem 3rem;
+}
+
+.hidden {
+  display: none;
+}

@@ -1,0 +1,31 @@
+# Local development with hot reload. Run everything through compose, not on the
+# host, so the environment is identical for everyone.
+#
+#   docker compose up            -> http://localhost:3000
+#   docker compose run --rm web npm test
+#   docker compose run --rm web npm install <pkg>
+
+services:
+  web:
+    build:
+      context: .
+      target: dev
+    ports:
+      - "3000:3000"
+    environment:
+      # Read secrets from your local .env (copy .env.example first).
+      - PORT=3000
+      - DATABASE_PATH=/app/data/via-verde.sqlite
+      - AI_API_KEY=${AI_API_KEY:-}
+      - AI_BASE_URL=${AI_BASE_URL:-https://api.openai.com/v1}
+      - AI_MODEL=${AI_MODEL:-gpt-4o-mini}
+    volumes:
+      # Bind-mount source for hot reload…
+      - .:/app
+      # …but keep the container's node_modules (native better-sqlite3 build).
+      - /app/node_modules
+      # Persist the SQLite database between restarts.
+      - via-verde-data:/app/data
+
+volumes:
+  via-verde-data:

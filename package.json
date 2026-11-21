@@ -1,0 +1,24 @@
+{
+  "name": "via-verde",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Pick the greener way to get there. A tiny MVP that estimates a trip's CO2, suggests greener alternatives, and keeps a running total of the emissions you avoid.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.3.0",
+    "express": "^4.21.0"
+  },
+  "devDependencies": {
+    "supertest": "^7.0.0",
+    "vitest": "^2.1.0"
+  }
+}

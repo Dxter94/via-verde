@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vía Verde — pick the greener way to get there</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <h1>🌿 Vía Verde</h1>
+      <p>Pick the greener way to get there.</p>
+    </header>
+
+    <main>
+      <section class="card">
+        <h2>Plan a trip</h2>
+        <form id="trip-form">
+          <div class="row">
+            <label>
+              From (optional)
+              <input name="origin" type="text" placeholder="Home" />
+            </label>
+            <label>
+              To (optional)
+              <input name="destination" type="text" placeholder="Office" />
+            </label>
+          </div>
+          <div class="row">
+            <label>
+              Distance (km)
+              <input
+                name="distance_km"
+                type="number"
+                min="0.1"
+                step="0.1"
+                required
+                placeholder="8.5"
+              />
+            </label>
+            <label>
+              How are you travelling?
+              <select name="mode" id="mode-select" required></select>
+            </label>
+          </div>
+          <button type="submit">Check this trip</button>
+        </form>
+
+        <div id="result" class="result hidden"></div>
+      </section>
+
+      <section class="card">
+        <h2>Your impact so far</h2>
+        <div id="stats" class="stats">Loading…</div>
+      </section>
+
+      <section class="card">
+        <h2>Recent trips</h2>
+        <ul id="trips" class="trips"></ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        MVP built for the course <em>Building Digital Products with Generative
+        AI</em>. Emission factors are illustrative defaults — see the README.
+      </p>
+    </footer>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,3 @@
+# This folder holds the runtime SQLite database (git-ignored).
+# The .gitkeep keeps the empty folder in version control so the app has
+# somewhere to write on a clean machine.
